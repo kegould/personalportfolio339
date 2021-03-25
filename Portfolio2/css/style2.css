@@ -1,0 +1,561 @@
+body{
+    background-color: white;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1{
+    font-size: 50px;
+    line-height: 1;
+    padding: 40px 0;
+    text-align: center;
+    color:black;
+  }
+  
+  h2{
+    font-size: 32px;
+    line-height: 1.5;
+  }
+  
+  nav li{
+    display:inline;
+    padding-right:20px;
+  
+  }
+  
+  nav{
+    background-color: #c2d1e5;;
+    padding: 25px 0; 
+    text-align: left;
+  }
+  
+  footer{
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+  }
+  
+  header p{
+    color: black;
+    text-transform:bold;
+    font-size: 24px;
+    padding: 0 100px;
+    text-align: center;
+  }
+  nav a{
+    text-decoration:none;
+    color: black;
+    font-weight: bold;
+  
+  }
+  a:hover, a:focus{
+    text-decoration:underline;
+  }
+  
+  /*Req 3a*/
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 7px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position:absolute;
+    top:-50px;
+    
+  
+  }
+  .skip a:focus{
+    top:10px;
+  
+  }
+  a:focus{
+    border-top-style:dashed;
+    border-bottom-style:dashed;
+    border-top-width:2px;
+    border-bottom-width:2px;
+  }
+  .container{
+    display:grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap:20px;
+  
+  }
+  
+  header{
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 400px;                /* Parallax effect */
+      
+    margin-bottom:25px;
+  
+    background-image:url(../images/header.jpg);
+   
+  
+  }
+  
+  .about, .method, .client, .contacts{
+  
+    grid-column:2/span 2;
+  
+  }
+  
+  .about-image, .method-image, .client-image, .contact-image{
+  
+    grid-column:1/ -1;
+    max-height:650px;
+    overflow:hidden;
+  }
+  
+  .about, .about-image{
+     grid-row:1/ span 1;
+  
+  }
+  
+  /*Req 7b & 8d*/
+  .method, .method-image{
+     /*Your Code Here*/
+     grid-row:2/ span 1;
+  }
+  
+  /*Req 7b & 8d*/
+  .client, .client-image{
+      grid-row:3/ span 1;
+  }
+  
+  /*Req 7b & 8d*/
+  .contacts, .contact-image{
+  
+      grid-row:4/ span 1;
+  }
+  
+  /*Req 9*/
+  .text{
+    background-color: rgba(255, 255, 255, .8);
+    border: 5px solid black;
+    padding: 30px;
+    text-align:center;
+    align-self:center;
+    margin-top:0px;
+  
+  }
+  .responsive {
+      width: 100%;
+    }
+
+/* ADDED FROM TM */
+.gallery-images {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+}
+.gallery-images img{
+    object-fit: cover;
+    width: 100%;
+    padding: 0 1px; 
+    background-color: rgb(214, 214, 214);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.smoothie-image img, .tofuscramble-image img, .avotoast-image img{
+    max-width: 300px;
+    height: auto;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.smoothie-image, .tofuscramble-image, .avotoast-image{
+    margin-left: auto;
+    margin-right: auto;
+}
+.smoothie, .tofu-scramble, .avocado-toast{
+    background-color: rgb(152, 93, 95, 0.25);
+    margin: 20px;
+}
+
+.salad-image img, .chickpeatuna-image img, .falafel-image img{
+    max-width: 300px;
+    height: auto;
+    padding: 5px;
+    margin: auto;
+}
+
+.salad, .chickpeatuna, .falafel{
+    background-color: rgb(152, 93, 95, 0.25);
+    margin: 20px;
+}
+
+.lasagna-image img, .lentilsoup-image img, .stirfry-image img{
+    max-width: 300px;
+    overflow: hidden;
+    height: auto;
+    
+    padding: 5px;
+}
+
+.pasta, .lasagna, .lentilsoup, .stirfry{
+    background-color: rgb(152, 93, 95, 0.25);
+    margin: 20px;
+}
+  
+  @media all and (min-width: 1024px){
+  
+      
+    img{
+       width:100%;
+    }
+      
+    nav{
+      padding: 30px 0px;
+      vertical-align:middle;
+      text-align:right;
+    }
+  
+    .container{
+      display:grid;
+      grid-template-columns:50px auto 500px auto 50px;
+      grid-template-rows:400px 425px 425px 400px;
+    }
+  
+    .about, .client, .method-image, .contact-image{
+      grid-column:3/span 2;
+    }
+  
+    .about-image, .client-image, .method, .contacts{
+      grid-column:2/ span 2;
+    }
+    div.about:hover,div.method:hover,div.client:hover,div.contacts:hover{
+      background-color:#c2d1e5;
+    }
+    div.gallery:hover {
+      border: 1px solid #777;
+      box-sizing: border-box;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+  }
+    p.about-p{
+        text-align:center;
+        padding:1em;
+        display:inline-block;
+        border-bottom:.1em solid black;
+    }
+    h2.about-header{
+        text-align:center;
+        padding:1em;
+    }
+    p.about-txt{
+        padding:1em;
+        text-align:left;
+        display:inline-block;
+    }
+    img.about-image{
+        
+        
+        display:block;
+        margin:10px;
+        width:50%;
+    }
+  /* ADDED TM DESKTOP*/
+    .gallery {
+        display: flex; 
+        flex-wrap: wrap; 
+        flex-direction: row; 
+        padding: 0 4px;
+        margin: 15px;
+    }
+        
+
+    .gallery-images{
+        display: grid;
+        grid-template: repeat(3, 300px) / repeat(3, 300px);
+        
+    }
+    figcaption{
+        overflow: auto;
+    }
+
+
+    .nachos figure img{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+
+    .nachos figure figcaption{
+        background: rgba(250, 235, 215,.5);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .nachos figure:hover figcaption{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .alteatschickpeatuna figure img{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+
+    .alteatschickpeatuna figure figcaption{
+        background: rgba(250, 235, 215,.5);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .alteatschickpeatuna figure:hover figcaption{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .tacosalad figure img{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+
+    .tacosalad figure figcaption{
+        background: rgba(250, 235, 215,.5);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .tacosalad figure:hover figcaption{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .stirfrynoodle figure img{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+
+    .stirfrynoodle figure figcaption{
+        background: rgba(250, 235, 215,.5);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .stirfrynoodle figure:hover figcaption{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .stuffedmushrooms figure img{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+
+    .stuffedmushrooms figure figcaption{
+        background: rgba(250, 235, 215,.5);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .stuffedmushrooms figure:hover figcaption{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .taco figure img{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+
+    .taco figure figcaption{
+        background: rgba(250, 235, 215,.5);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .taco figure:hover figcaption{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .wagamama figure img{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+
+    .wagamama figure figcaption{
+        background: rgba(250, 235, 215,.5);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .wagamama figure:hover figcaption{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .chickennugs figure img{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+
+    .chickennugs figure figcaption{
+        background: rgba(250, 235, 215,.5);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .chickennugs figure:hover figcaption{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .thebagel figure img{
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+    }
+
+    .thebagel figure figcaption{
+        background: rgba(250, 235, 215,.5);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: opacity .2s, visibility .2s;
+    }
+
+    .thebagel figure:hover figcaption{
+        visibility: visible;
+        opacity: 1;
+    }
+  
+  @media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    .skip a{
+      -webkit-transition: none; /* sets to default setting */
+      transition: none;        /* sets to default setting */
+     }
+  
+    /*Turn off parallax*/
+    header{
+      background-attachment: initial;
+    }
+  }
+  /* IPAD VIEW @media screen and ((min-width: 760px) and (max-width: 1024px))*/ 
